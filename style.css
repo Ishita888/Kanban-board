@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+header {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  color: #3a3a2a;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+header h1 {
+  text-align: center;
+  flex: 1;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+header button {
+  background-color: white;
+  color: #3a3a2a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+header button:hover {
+  background-color: #e8f0ff;
+}
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}
+.column {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 16px;
+  flex: 1;
+  min-height: 700px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #3a3a2a;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(100,80,60,0.2);
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #4f8cff;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 4px 10px;
+}
+
+.edit-btn {
+  background-color: #e8f0ff;
+  color: #4f8cff;
+}
+
+.delete-btn {
+  background-color: #ffe8e8;
+  color: #ff4f4f;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  outline: none;
+  padding: 10px 12px;
+}
+
+.modal input:focus,
+.modal textarea:focus,
+.modal select:focus {
+  border-color: #4f8cff;
+}
+
+.modal textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.modal-buttons button {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.btn-cancel {
+  background-color: #f0f2f5;
+  color: #888;
+}
+
+.btn-save {
+  background-color: #4f8cff;
+  color: white;
+}
+body.dark {
+  background-image: url('darkbg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.dark header {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: white;
+}
+
+body.dark header h1 {
+  color: white;
+}
+
+body.dark header button {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+body.dark .column {
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+body.dark .column h2 {
+  color: white;
+}
+
+body.dark .card {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255,255,255,0.15);
+}
+
+body.dark .card h3 {
+  color: white;
+}
+
+body.dark .card p {
+  color: rgba(255,255,255,0.6);
+}
