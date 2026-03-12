@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+        <button id="openModalBtn">+ Add Task</button>
+        </div>
+        <h1>Kanban Board</h1>
+        <div class="header-right">
+        <button id="darkModeBtn">🌙 Dark</button>
+        </div>
+    </header>
+    <div class="board">
+        <div class="column" id="col-todo">
+            <h2>Todo</h2>
+            <div class="cards-container" id="cards-todo"></div>
+        </div>
+        <div class="column" id="col-progress">
+            <h2>In Progress</h2>
+            <div class="cards-container" id="cards-progress"></div>
+        </div>
+        <div class="column" id="col-done">
+            <h2>Done</h2>
+            <div class="cards-container" id="cards-done"></div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2 id="modalTitle">Add New Task</h2>
+
+      <input type="text" id="taskTitle" placeholder="Task title...">
+      <textarea id="taskDesc" placeholder="Description (optional)..."></textarea>
+      <select id="taskColumn">
+        <option value="todo">Todo</option>
+        <option value="progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+
+      <div class="modal-buttons">
+        <button class="btn-cancel" id="cancelBtn">Cancel</button>
+        <button class="btn-save" id="saveBtn">Save Task</button>
+      </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
